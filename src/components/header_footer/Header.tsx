@@ -1,9 +1,15 @@
+import { useEffect,useState } from 'react';
 import { AppBar, Toolbar, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-//import SideDrawer from './SideDrawer'
+import SideDrawer from './SideDrawer'
 
 const Header = () => {
+    const [drawerOpen,setDrawerOpen] = useState(false);
+    const toggleDrawer =(value:boolean) =>{
+        setDrawerOpen(value)
+    }
+
     return (
         <AppBar
             position="fixed"
@@ -22,11 +28,15 @@ const Header = () => {
                 <IconButton
                     ariea-aria-label='Menue'
                     color="inherit"
+                    onClick={()=>toggleDrawer(true)}
                 >
                     <MenuIcon/>
                 </IconButton>
 
-                {/* <SideDrawer/> */}
+                <SideDrawer
+                    open={drawerOpen}
+                    onClose={(value:boolean)=>toggleDrawer(value)}
+                />
 
             </Toolbar>
         </AppBar>
