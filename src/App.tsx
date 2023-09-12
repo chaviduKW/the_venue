@@ -2,7 +2,8 @@ import './resources/styles.css'
 
 
 
-import Header from './components/header_footer/Header'
+import Header from './components/header_footer/Header';
+import Footer from './components/header_footer/Footer';
 
 const App = ()=> {
 
@@ -14,6 +15,8 @@ const App = ()=> {
       <div style={{backgroundColor:'blue',height:'800px'}}></div>
       <div style={{backgroundColor:'green',height:'800px'}}></div>
       <div style={{backgroundColor:'yellow',height:'800px'}}></div>
+
+      <Footer/>
     </div>
   )
 }
