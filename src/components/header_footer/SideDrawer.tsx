@@ -1,4 +1,5 @@
 import { Drawer, List, ListItem } from '@mui/material'
+import { scroller } from 'react-scroll'
 
 type SideDrawerProps = {
     open: boolean
@@ -19,9 +20,19 @@ const SideDrawer = ({ open, onClose }: SideDrawerProps) => {
         { where: 'location', value: 'Location' },
     ]
 
+    const scrollToElement = (element:string) =>{
+        scroller.scrollTo(element,{
+            duration:1500,
+            delay:100,
+            smooth:true, 
+            offset:-150
+        })
+        onClose(false);
+    }
+
     const renderItem =(item:LinkItem) =>{
         return(
-        <ListItem button onClick={()=> alert(item.where)} key={item.where}>
+        <ListItem button onClick={()=> scrollToElement(item.where)} key={item.where}>
             {item.value}
         </ListItem>
         )
