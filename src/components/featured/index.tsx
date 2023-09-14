@@ -1,4 +1,5 @@
 import Carousel from "./Carousel";
+import TimeUntil from "./timeUntil";
 
 const Featured =()=>{
     return (
@@ -9,6 +10,7 @@ const Featured =()=>{
                     Ariana Grande
                 </div>
             </div>
+            <TimeUntil/>
         </div>
     )
 }
