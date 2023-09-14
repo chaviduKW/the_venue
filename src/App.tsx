@@ -7,7 +7,7 @@ import Featured from './components/featured';
 import VenueNfo from './components/venueNfo';
 import Highlights from './components/highlights';
 import Pricing from './components/pricing';
-
+import Location from './components/location';
 
 const App = ()=> {
 
@@ -29,6 +29,10 @@ const App = ()=> {
 
       <>
         <Pricing/>
+      </>
+
+      <>
+        <Location/>
       </>
 
       <div style={{backgroundColor:'red',height:'800px'}}></div>
